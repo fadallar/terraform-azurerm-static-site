@@ -1,7 +1,7 @@
-variable "subnet_ids" {
-  description = "Subnet Id used by the static site endpoint, required if private endpoint is enabled"
-  type        = list(string)
-  default     = []
+variable "private_endpoint_subnet_id" {
+  description = "Subnet Id the private endpoint is associated with. Mandatory if private endpoint is used"
+  type = string
+  default = null
 }
 
 variable "private_dns_zone_ids" {

@@ -9,6 +9,6 @@ resource "azurerm_static_site" "static_site" {
         content {
             type         = var.identity_type
             identity_ids = var.identity_ids == "UserAssigned" ? var.identity_ids : null
-
+        }
     tags = merge(var.default_tags, var.extra_tags)
 }

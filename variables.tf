@@ -1,3 +1,8 @@
+variable "resource_group_name" {
+  description = "Resource Group the resources will belong to"
+  type        = string
+}
+
 variable "location_short" {
   description = "Short string for Azure location"
   type        = string

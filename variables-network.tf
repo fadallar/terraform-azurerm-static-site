@@ -12,6 +12,6 @@ variable "private_dns_zone_ids" {
 
 variable "enable_private_endpoint" {
     description = "Static Site Private DNS Zone id, required if private endpoint is enabled"
-    type = string
-    default = ""
+    type = bool
+    default = true
 }

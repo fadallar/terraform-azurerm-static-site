@@ -3,6 +3,7 @@ variable "default_tags_enabled" {
   type        = bool
   default     = true
 }
+
 variable "default_tags" {
   description = "Default Base tagging"
   type        = map(string)

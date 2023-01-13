@@ -7,3 +7,10 @@ data "azurecaf_name" "static_site" {
   clean_input   = true
   separator     = "-"
 }
+
+resource "random_string" "random" {
+  length           = 3
+  special          = false
+  upper            = false
+  numeric          = true
+}

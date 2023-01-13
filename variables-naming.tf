@@ -18,8 +18,19 @@ variable "use_caf_naming" {
 }
 
 # Custom naming override
-variable "static_site_custom_name" {
+variable "custom_name" {
   description = "Custom Azure Static Site name, generated if not set"
   type        = string
   default     = ""
+}
+
+variable "workload_info" {
+  description = "Workload additional info to be use in the resource name"
+  type        = string
+  default     = ""
+}
+
+variable "landing_zone_slug" {
+  description = "Landing zone slug (acronym) usd in the resource name"
+  type        = string
 }

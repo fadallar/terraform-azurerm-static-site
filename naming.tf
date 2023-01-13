@@ -9,8 +9,8 @@ data "azurecaf_name" "static_site" {
 }
 
 resource "random_string" "random" {
-  length           = 3
-  special          = false
-  upper            = false
-  numeric          = true
+  length  = 3
+  special = false
+  upper   = false
+  numeric = true
 }

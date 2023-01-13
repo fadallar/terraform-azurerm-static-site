@@ -10,8 +10,8 @@ locals {
   application_id = var.stack
   workload_info = var.workload_info
   separator = "-"
-  random_id = random_string.random.result
-  name_components_list = compact(service_slug,landing_zone_slug,application_id,workload_info,random_id)
-  generated_name = join(separator,name_components_list)
-  resource_name = coalesce(lower(custom_name),lower(generated_name))
+  generated_random_value = random_string.random.result
+  name_components_list = compact(service_slug,landing_zone_slug,application_id,workload_info,generated_random_value)
+  standard_name = join(separator,name_components_list)
+  name = coalesce(lower(custom_name),lower(standard_name))
 }

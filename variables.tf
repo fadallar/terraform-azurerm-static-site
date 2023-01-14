@@ -13,18 +13,13 @@ variable "location" {
   type        = string
 }
 
-variable "client_name" {
-  description = "Client name/account used in naming"
-  type        = string
-}
-
 variable "environment" {
   description = "Project environment"
   type        = string
 }
 
 variable "stack" {
-  description = "Project stack name"
+  description = "Project, Application or Workload identifier"
   type        = string
 }
 
@@ -43,7 +38,7 @@ variable "sku_size" {
 }
 
 variable "identity_type" {
-  description = "The Type of Managed Identity assigned to this Static Site resource. Possible values are SystemAssigned, UserAssigned and SystemAssigned, UserAssigned"
+  description = "The Type of Managed Identity assigned to this Static Site resource. Possible values are SystemAssigned, UserAssigned and : SystemAssigned, UserAssigned"
   type        = string
   default     = null
 }

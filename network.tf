@@ -6,7 +6,7 @@ resource "azurerm_private_endpoint" "static_site_pep" {
   subnet_id           = var.private_endpoint_subnet_id
   tags                = merge(var.default_tags, var.extra_tags)
   private_dns_zone_group {
-    name                 = "static-site-group"
+    name                 = "default"
     private_dns_zone_ids = [var.private_dns_zone_ids]
   }
 

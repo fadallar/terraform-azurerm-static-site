@@ -1,6 +1,21 @@
-// Basic Azure static site set-up
+# Basic Azure Static site with private endpoint 
 
-// Core modules
+This an example for setting-up a an Azure Static site with private endpoint
+ This examples creates
+  - Sets the different Azure Region representation ( location, location_short, location_cli ...) --> module "regions_master"
+  - Instanciates a map object with the common Tags ot be applied to all resources --> module "base_tagging"
+  - A resource-group --> module "ressource" 
+  - A Static-site with private connectivity 
+
+The template does not create the subnet and private DNZ zone for the private endpoint  
+
+
+
+## Main.tf file content
+  Please replace the modules source and version with your relevant information  
+
+```hcl  
+/// Core modules
 
 module "regions_master" {
   source  = "app.terraform.io/<ORGANIZATION>/regions-master/azurem"
@@ -48,5 +63,6 @@ module "static-site" {
 
   // Static Site Private Endpoint specifics
   private_endpoint_subnet_id      = " " ### Pass the resource id of the subnet used by the static site private endpoint 
-  private_dns_zone_ids            = " " ### Pass thre resource id of the privatelink.2.azurestaticapps.net dns zone used by the private endpoont
+  private_dns_zone_ids            = " " ### Pass thre resource id of the privatelink.2.azurestaticapps.net dns zone used by the 
 }
+```

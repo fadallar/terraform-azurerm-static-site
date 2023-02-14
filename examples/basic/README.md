@@ -41,7 +41,8 @@ module "ressource" {
     environment = var.environment
     stack       = var.stack
     location    = module.regions_master.location
-    location_short                  = module.regions_master.location_short
+    location_short = module.regions_master.location_short
+    default_tags   = module.base-tagging.base_tags
 }
 
 // Static Site
